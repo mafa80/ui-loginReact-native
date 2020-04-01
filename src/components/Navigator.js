@@ -1,20 +1,12 @@
-import * as React from "react";
-import { View, Text } from "react-native";
+import React from "react";
+
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import LoginScreen from "./src/screens/loginScreen";
-import HomeScreen from "./src/screens/HomeScreen";
-import LoadingScreen from "./src/screens/LoadingScreen";
-import TestScreen from "./src/screens/Test";
-import "react-native-gesture-handler";
-import firebase from "firebase";
-import Firebase from "./src/auth/firebaseConf";
-
-console.log(Firebase.name);
+import { LoginScreen, HomeScreen, LoadingScreen, TestScreen } from "../screens";
 
 const Stack = createStackNavigator();
 
-export default function App() {
+export default function Navigator() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -36,7 +28,7 @@ export default function App() {
         <Stack.Screen
           name="Test"
           component={TestScreen}
-          options={{ headerShown: true }}
+          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </NavigationContainer>

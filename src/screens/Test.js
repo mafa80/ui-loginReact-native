@@ -16,7 +16,6 @@ export default function TestScreen({ navigation }) {
   const nombre = "TEST";
   return (
     <ScrollView>
-      <HeaderStyled>{nombre}</HeaderStyled>
       <View style={styles.container}>
         <Card style={styles.containerRegister}>
           <Image source={imagen} style={styles.image} />

@@ -13,12 +13,18 @@ const imgbg = require("../../imagenes/fondo.jpg");
 
 export default function LoginScreen({ navigation }) {
   return (
-    <ImageBackground source={imgbg} style={{ width: "100%", height: "100%" }}>
+    <View style={{ flex: 1, backgroundColor: "#B45F0450" }}>
       <View style={styles.container}>
         <View>
-          <SocialIcon title="Sign In With Facebook" button type="facebook" />
+          <SocialIcon
+            title="Sign In With Facebook"
+            style={{ backgroundColor: "#0174DF90" }}
+            button
+            type="facebook"
+          />
           <SocialIcon
             title="Sign In With Google"
+            style={{ backgroundColor: "#FF400090" }}
             button
             type="google"
             onPress={() => navigation.navigate("Loading")}
@@ -37,7 +43,7 @@ export default function LoginScreen({ navigation }) {
           </Text>
         </View>
       </View>
-    </ImageBackground>
+    </View>
   );
 }
 
